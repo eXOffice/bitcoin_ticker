@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const RunApp());
-}
+import 'price_screen.dart';
+
+void main() => runApp(RunApp());
 
 class RunApp extends StatelessWidget {
-  const RunApp({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp(
+      theme: ThemeData.dark().copyWith(
+          primaryColor: Colors.lightBlue,
+          scaffoldBackgroundColor: Colors.white),
+      home: PriceScreen(),
+    );
   }
 }
